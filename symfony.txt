@@ -1,0 +1,35 @@
+GENERAR XML
+php bin/console doctrine:mapping:convert xml ./src/AppBundle/Resources/doctrine/metadata/orm --from-database --force
+
+GENERAR ENTIDADES
+php bin/console doctrine:generate:entities NombreBundle
+
+CREAR FORM
+php bin/console generate:doctrine:form AppBundle:nameform
+
+CREAR ENTIDAD
+php bin/console doctrine:generate:entity
+
+TABLAS
+
+//ACTUALIZAR
+php bin/console doctrine:schema:update --force 
+
+//CREAR TABLA A PARTIR DE ENTIDADES
+php bin/console doctrine:schema:create 
+
+//BORRAR TODAS LAS TABLAS
+php bin/console doctrine:schema:drop 
+
+NOTACIONES
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+*@Route
+*/
+
+VALIDACIONES
+use Symfony\component\validator\constraints as Assert;
+
+
+ssh serv5-4@10.7.20.234
